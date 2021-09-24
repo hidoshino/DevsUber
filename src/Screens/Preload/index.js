@@ -1,12 +1,15 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import { useNavigation } from '@react-navigation/core';
+import { Container, Text } from './styled';
 
 export default () => {
+
+    const navigation = useNavigation();
+
     return (
-      <SafeAreaView>
-        <Text>Página de PRELOAD</Text>
-      </SafeAreaView>
+      <Container>
+        <Text>Preload</Text>
+      </Container>
     );
   }
 
- 

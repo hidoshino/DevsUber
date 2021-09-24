@@ -1,12 +1,10 @@
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
 
-const Page = () => {
+export default  () => {
     return (
       <SafeAreaView>
-        <Text>Página de PRELOAD</Text>
+        <Text>Página de Login</Text>
       </SafeAreaView>
     );
   }
-
-export default Page;

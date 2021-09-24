@@ -14,6 +14,7 @@ export default () => {
             initialRouteName="Preload"
         >
             <MainStack.Screen name="Preload" component={Preload} />
+            <MainStack.Screen name="Login" component={Login} />
         </MainStack.Navigator>
     )
 }
