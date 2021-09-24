@@ -1,0 +1,14 @@
+com/devsuber/BuildConfig.java
+ com.devsuber.BuildConfig
+com/devsuber/MainActivity.java
+ com.devsuber.MainActivity
+com/devsuber/ReactNativeFlipper.java
+ com.devsuber.ReactNativeFlipper
+ com.devsuber.ReactNativeFlipper$1
+ com.devsuber.ReactNativeFlipper$2
+ com.devsuber.ReactNativeFlipper$2$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/devsuber/MainApplication.java
+ com.devsuber.MainApplication
+ com.devsuber.MainApplication$1
