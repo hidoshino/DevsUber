@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.SafeAreaView`
+export const Container = styled.KeyboardAvoidingView`
     flex: 1;
 `;
 
@@ -35,4 +35,29 @@ export const MenuItem = styled.TouchableHighlight`
 export const MenuItemText = styled.Text`
     color: #FFF;
     font-size: 16px;
+`;
+
+
+export const Input = styled.TextInput`
+    margin: 10px; 20px;
+    border-bottom-width: 2px;
+    border-bottom-color: #CCC;
+    height: 50px;
+    font-size: 16px;
+    color: #333;
+`;
+
+export const ActionButton = styled.TouchableHighlight`
+    background-color: #3574CB;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0px 2px 2px #999;
+`;
+
+export const ActionButtonText = styled.Text`
+    color: #FFF;
+    font-size: 18px;
 `;
