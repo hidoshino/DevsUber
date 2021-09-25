@@ -11,12 +11,12 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.93.0] C:\Users\Filipe 
 MERGED from [:react-native-async-storage_async-storage] D:\PROJETOS\MOBILE\DevsUber\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_masked-view] D:\PROJETOS\MOBILE\DevsUber\node_modules\@react-native-community\masked-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-reanimated] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-reanimated\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-safe-area-context] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.65.1] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\7cdf8de9c37004713d4017747f452054\transformed\jetified-react-native-0.65.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\13fd9b66b2f17faf01d7b58e404cc03f\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r250230] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\2dd430581997c82f8fcb8ae144aabe30\transformed\jetified-android-jsc-r250230\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-reanimated] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-reanimated\android\build\.transforms\0b2de751f561990da0c361de1ab4596d\transformed\jetified-react-native-reanimated-65-jsc\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:flipper:2.5.0] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\2f21b78f47e70f7f390b95648cb53ecb\transformed\jetified-flipper-2.5.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:stetho:2.5.0] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\0c4bcb3bc45babba9de2932e4bc8e6f3\transformed\jetified-stetho-2.5.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fresco:2.5.0] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\801ccee8e1f8d30d957d8b138c94ad86\transformed\jetified-fresco-2.5.0\AndroidManifest.xml:2:1-9:12
@@ -170,8 +170,6 @@ MERGED from [:react-native-community_masked-view] D:\PROJETOS\MOBILE\DevsUber\no
 MERGED from [:react-native-community_masked-view] D:\PROJETOS\MOBILE\DevsUber\node_modules\@react-native-community\masked-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-reanimated] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-reanimated\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-reanimated] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-reanimated\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-safe-area-context] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-safe-area-context] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
@@ -182,6 +180,8 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Fili
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\13fd9b66b2f17faf01d7b58e404cc03f\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [org.webkit:android-jsc:r250230] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\2dd430581997c82f8fcb8ae144aabe30\transformed\jetified-android-jsc-r250230\AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r250230] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\2dd430581997c82f8fcb8ae144aabe30\transformed\jetified-android-jsc-r250230\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-reanimated\android\build\.transforms\0b2de751f561990da0c361de1ab4596d\transformed\jetified-react-native-reanimated-65-jsc\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-reanimated] D:\PROJETOS\MOBILE\DevsUber\node_modules\react-native-reanimated\android\build\.transforms\0b2de751f561990da0c361de1ab4596d\transformed\jetified-react-native-reanimated-65-jsc\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:flipper:2.5.0] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\2f21b78f47e70f7f390b95648cb53ecb\transformed\jetified-flipper-2.5.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:flipper:2.5.0] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\2f21b78f47e70f7f390b95648cb53ecb\transformed\jetified-flipper-2.5.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:stetho:2.5.0] C:\Users\Filipe Paiva\.gradle\caches\transforms-3\0c4bcb3bc45babba9de2932e4bc8e6f3\transformed\jetified-stetho-2.5.0\AndroidManifest.xml:5:5-7:41
