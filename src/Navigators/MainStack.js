@@ -11,7 +11,7 @@ export default () => {
         <MainStack.Navigator screenOptions={{
             headerShown: false
         }}
-            initialRouteName="Preload"
+            initialRouteName="Login"
         >
             <MainStack.Screen name="Preload" component={Preload} />
             <MainStack.Screen name="Login" component={Login} />
