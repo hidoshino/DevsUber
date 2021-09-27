@@ -8,6 +8,8 @@ import GeoCoder from 'react-native-geocoding';
 import MapView from 'react-native-maps';
 import MapViewDirections from "react-native-maps-directions";
 
+import AdressModal from "../../Components/AdressModal";
+
 import {
     Container,
     IntineraryArea,
@@ -31,6 +33,8 @@ export default () => {
     const map = useRef();
     const api = useDevsUberApi();
 
+
+
     const [mapLoc, setMapLoc] = useState({
         center: {
             latitude: 37.78825,
@@ -48,6 +52,9 @@ export default () => {
     const [requestDistance, setRequestDistance] = useState(0);
     const [requestTime, setRequestTime] = useState(0);
     const [requestPrice, setRequestPrice] = useState(0);
+
+    const [modalTitle, setModalTitle] = useState('');
+    const [modalVisible, setModalVisible] = useState(false);
 
     useEffect(() => {
 
@@ -95,7 +102,8 @@ export default () => {
     };
 
     const handleFromClick = () => {
-
+        setModalTitle("Escolha uma origem");
+        setModalVisible(true);
     };
 
     const handleToClick = async () => {
@@ -163,6 +171,11 @@ export default () => {
 
     return (
         <Container>
+            <AdressModal
+                title={modalTitle}
+                visible={modalVisible}
+                visibleAction={setModalVisible}
+            />
             <MapView
                 ref={map}
                 style={{ flex: 1 }}
