@@ -9,6 +9,7 @@ import MapView from 'react-native-maps';
 import MapViewDirections from "react-native-maps-directions";
 
 import AdressModal from "../../Components/AdressModal";
+import DriverModal from "../../Components/DriverModal";
 
 import {
     Container,
@@ -25,8 +26,10 @@ import {
     RequestValue,
     RequestButtons,
     RequestButton,
-    RequestButtonText
+    RequestButtonText,
+    LoadingArea
 } from './styled'
+import { ActivityIndicator } from "react-native";
 
 export default () => {
 
@@ -55,6 +58,12 @@ export default () => {
 
     const [modalTitle, setModalTitle] = useState('');
     const [modalVisible, setModalVisible] = useState(false);
+    const [modalField, setModalField] = useState('');
+
+    const [driverInfo, setDiverInfo] = useState({});
+    const [driverModalVisible, setDriverModalVisible] = useState(false);
+
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
 
@@ -70,6 +79,14 @@ export default () => {
         }
 
     }, [toLoc])
+
+    useEffect(() => {
+
+        if (fromLoc.center) {
+            setMapLoc(fromLoc);
+        }
+
+    }, [fromLoc]);
 
     const getMyCurrentPosition = () => {
         Geolocation.getCurrentPosition(async (info) => {
@@ -103,28 +120,14 @@ export default () => {
 
     const handleFromClick = () => {
         setModalTitle("Escolha uma origem");
+        setModalField('from');
         setModalVisible(true);
     };
 
     const handleToClick = async () => {
-        const geo = await GeoCoder.from('Natal Shooping');
-
-        if (geo.results.length > 0) {
-            const loc = {
-                name: geo.results[0].formatted_address,
-                center: {
-                    latitude: geo.results[0].geometry.location.lat,
-                    longitude: geo.results[0].geometry.location.lng
-                },
-                zoom: 16,
-                pitch: 0,
-                altitude: 0,
-                heading: 0
-            }
-
-            setToLoc(loc);
-            console.log(loc.center);
-        }
+        setModalTitle("Escolha um destino");
+        setModalField('to');
+        setModalVisible(true);
     }
 
     const handleDirectionsReady = async (res) => {
@@ -140,9 +143,9 @@ export default () => {
 
         map.current.fitToCoordinates(res.coordinates, {
             edgePadding: {
-                left: 50,
-                right: 50,
-                bottom: 50,
+                left: 100,
+                right: 100,
+                bottom: 100,
                 top: 400
             }
         })
@@ -165,16 +168,73 @@ export default () => {
         setMapLoc(fromLoc);
     }
 
-    const handleRequestGo = () => {
+    const handleRequestGo = async () => {
+        setLoading(true);
+
+        const findDriver = await api.findDriver({
+            from:{
+                latitude: fromLoc.center.latitude,
+                longitude: fromLoc.center.longitude
+            },
+            to:{
+                latitude: toLoc.center.latitude,
+                longitude: toLoc.center.longitude
+            }
+        });
+
+        setLoading(false);
+
+        if(!findDriver.error){
+            
+            setDiverInfo(findDriver.race);
+            setDriverModalVisible(true);    
+
+            handleRequestCancel();
+
+        }else{
+            alert(findDriver.error);
+        }
+
+    }
+
+    const handleModalClick = (field, address) => {
+
+        const loc = {
+            name: address.address,
+            center: {
+                latitude: address.latitude,
+                longitude: address.longitude
+            },
+            zoom: 16,
+            pitch: 0,
+            altitude: 0,
+            heading: 0
+        }
+
+        switch (field) {
+            case 'from':
+                setFromLoc(loc);
+                break;
+            case 'to':
+                setToLoc(loc);
+                break;
+        }
 
     }
 
     return (
         <Container>
+            <DriverModal 
+                driver={driverInfo}
+                visible={driverModalVisible}
+                visibleAction={setDriverModalVisible}
+            />
             <AdressModal
                 title={modalTitle}
                 visible={modalVisible}
                 visibleAction={setModalVisible}
+                field={modalField}
+                clickAction={handleModalClick}
             />
             <MapView
                 ref={map}
@@ -261,6 +321,11 @@ export default () => {
                     </IntineraryItem>
                 }
             </IntineraryArea>
+            {loading &&
+                <LoadingArea>
+                    <ActivityIndicator size="large" color="#FFF" />
+                </LoadingArea>
+            }
         </Container>
     )
 }

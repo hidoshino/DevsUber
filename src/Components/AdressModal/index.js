@@ -70,13 +70,17 @@ export default (props) => {
         setSearchText('');
     }
 
+    const handleResultClick = (item) => {
+        props.clickAction(props.field, item);
+        props.visibleAction(false);
+    };
+
     return (
         <Modal
             animationType="slide"
             transparent={false}
             visible={props.visible}
             onShow={handleClose}
-            
         >
             <ModalArea>
                 <ModalHeader>
@@ -92,7 +96,7 @@ export default (props) => {
                 </ModalHeader>
                 <ModalResults>
                     {results.map((item, key) => (
-                        <ModalResult key={key} underlayColor="#EEE">
+                        <ModalResult key={key} underlayColor="#EEE" onPress={()=>handleResultClick(item)}>
                             <ModalResultText>{item.address}</ModalResultText>
                         </ModalResult>
                     ))}
